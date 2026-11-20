@@ -1,0 +1,17 @@
+{
+  "name": "complaint-desk",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "Backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace Backend\" \"npm run dev --workspace frontend\"",
+    "build": "npm run build --workspace frontend",
+    "test": "npm run test --workspace Backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
